@@ -11,8 +11,9 @@
 <script type="text/babel">
     'use strict';
 
-     function LikeButton () {
+     const LikeButton = () => {
       // 함수형 컴포넌트 x 함수 컴포넌트 o
+       // function 이나 arrow 를 쓰면 this를 쓸 일이 없다.
        const [liked, setLiked] = React.useState(false) // 구조분해
        // 구조 분해는 반드시 배열로 해야한다.
        // 뭔 짓을 하든, 결국 return 한것이 화면이다.
@@ -22,7 +23,7 @@
          return (
            <button onClick={()=> {setLiked(true);}}>Like</button>
          );
-     };
+     };;
 
 
 </script>
